@@ -1,0 +1,3 @@
+class TautologyVerifier
+
+end
