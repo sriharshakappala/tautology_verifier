@@ -5,7 +5,15 @@ require_relative 'tautology_verifier/simulator'
 
 class TautologyVerifier
 
-  def self.parse_statements_and_identify_whether_tautology
+  def self.verify_tautology
+    propositional_statements = TautologyVerifier.get_statements
+    propositional_statements.each do |propositional_statement|
+      decision = TautologyVerifier.parse_statement(propositional_statement)
+      puts decision + "\n"
+    end
+  end
+
+  def self.get_statements
     max_statements_count = 0
     propositional_statements = Array.new
     puts "How many propositional statements do you want to check?"
@@ -14,9 +22,7 @@ class TautologyVerifier
     max_statements_count.times do |i|
       propositional_statements[i] = gets.chomp
     end
-    propositional_statements.each do |propositional_statement|
-      TautologyVerifier.parse_statement(propositional_statement)
-    end
+    propositional_statements
   end
 
   def self.parse_statement(propositional_statement)
@@ -24,9 +30,9 @@ class TautologyVerifier
     random_truth_values = Assumer.assign_random_truth_table(predicate_array)
     simulated_statement = Simulator.substitute_truth_values_into_statement(propositional_statement, random_truth_values)
     decision = Decider.decide_whether_tautology(simulated_statement)
-    puts decision + "\n"
+    decision
   end
 
 end
 
-TautologyVerifier.parse_statements_and_identify_whether_tautology
+TautologyVerifier.verify_tautology
