@@ -6,7 +6,7 @@ RSpec.describe Assumer, "#decide_whether_tautology" do
 
     it "returns a decision whether the simulated statement is a tautology or not" do
       decision = Decider.decide_whether_tautology("((true | true) & false)")
-      expect(simulated_statement).to eq false
+      expect(decision).to eq "False"
     end
 
   end
