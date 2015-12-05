@@ -1,3 +1,11 @@
+# Decider evaluates the expression by substituting the truth table values into the statement.
+# ____________________________________________________________________________________________________
+# Decider works on the below strategy
+# -----------------------------------
+# 1. Takes the truth table hash and for each predicate(key) it creates an instance variable which holds
+# the value of the corresonding predicate's key-value pair. Also creates a getter method dynamically for
+# evaluating it.
+
 class Decider
 
   def initialize(propositional_statement, truth_values)
@@ -21,6 +29,7 @@ class Decider
     eval(@propositional_statement)
   end
 
+  # Deprecated usage of decision maker
   def self.decide_whether_tautology(simulated_statement)
     decision = RubyVM::InstructionSequence.new(simulated_statement).eval
     decision
