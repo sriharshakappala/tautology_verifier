@@ -21,8 +21,10 @@ class Simulator
         decision = Decider.new(@propositional_statement, possible_truth_table).evaluate_expression
         if decision == false
           what_simulator_tells = "False"
+          break
         elsif decision == true && counter == @max_truth_tables
           what_simulator_tells = "True"
+          break
         end
       end
     end
