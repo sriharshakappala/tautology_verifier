@@ -17,9 +17,9 @@ class Assumer
     possible_truth_tables_count = 2 ** predicates_count
     (0...(possible_truth_tables_count)).each do |i|
       temp_val = possible_truth_tables_count - 1 - i
-      temp = Array.new(predicates_count)
+      temp = Hash.new
       (0...predicates_count).each do |j|
-        temp[j] = (temp_val[predicates_count - 1 -j ] == 1)
+        temp[predicate_array[j]] = (temp_val[predicates_count - 1 -j ] == 1)
       end
       possible_truth_tables_array << temp
     end
