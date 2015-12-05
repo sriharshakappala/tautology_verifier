@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Decider - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-decide_whether_tautology">::decide_whether_tautology</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-create_custom_attr">#create_custom_attr</a>
+    
+    <li ><a href="#method-i-create_custom_method">#create_custom_method</a>
+    
+    <li ><a href="#method-i-evaluate_expression">#evaluate_expression</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Decider">
+  <h1 id="class-Decider" class="class">
+    class Decider
+  </h1>
+
+  <section class="description">
+    
+<p><a href="Decider.html">Decider</a> evaluates the expression by substituting
+the truth table values into the statement. <em>__</em> <a
+href="Decider.html">Decider</a> works on the below strategy</p>
+<hr>
+<ol><li>
+<p>Takes the truth table hash and for each predicate(key) it creates an
+instance variable which holds</p>
+</li></ol>
+
+<p>the value of the corresonding predicate&#39;s key-value pair. Also creates
+a getter method dynamically for evaluating it.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-decide_whether_tautology" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decide_whether_tautology</span><span
+            class="method-args">(simulated_statement)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Deprecated usage of decision maker</p>
+          
+          
+
+          
+          <div class="method-source-code" id="decide_whether_tautology-source">
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/decider.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">decide_whether_tautology</span>(<span class="ruby-identifier">simulated_statement</span>)
+  <span class="ruby-identifier">decision</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">simulated_statement</span>).<span class="ruby-identifier">eval</span>
+  <span class="ruby-identifier">decision</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(propositional_statement, truth_values)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/decider.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">propositional_statement</span>, <span class="ruby-identifier">truth_values</span>)
+  <span class="ruby-ivar">@propositional_statement</span> = <span class="ruby-identifier">propositional_statement</span>
+  <span class="ruby-ivar">@truth_values</span> = <span class="ruby-identifier">truth_values</span>
+  <span class="ruby-ivar">@truth_values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">truth_value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-string">&quot;@&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">truth_value</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">truth_value</span>[<span class="ruby-value">1</span>])
+    <span class="ruby-identifier">create_custom_attr</span>(<span class="ruby-identifier">truth_value</span>[<span class="ruby-value">0</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_custom_attr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_custom_attr</span><span
+            class="method-args">(name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_custom_attr-source">
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/decider.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_custom_attr</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">create_custom_method</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>) { <span class="ruby-identifier">instance_variable_get</span>( <span class="ruby-string">&quot;@&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> ) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_custom_method" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_custom_method</span><span
+            class="method-args">(name, &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_custom_method-source">
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/decider.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_custom_method</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:define_method</span>, <span class="ruby-identifier">name</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-evaluate_expression" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">evaluate_expression</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="evaluate_expression-source">
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/decider.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">evaluate_expression</span>
+  <span class="ruby-identifier">eval</span>(<span class="ruby-ivar">@propositional_statement</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

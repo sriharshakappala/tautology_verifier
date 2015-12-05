@@ -1,0 +1,21 @@
+Sun, 06 Dec 2015 00:24:42 +0530
+./bin/bundler	Fri, 04 Dec 2015 17:21:07 +0530
+./bin/coderay	Fri, 04 Dec 2015 17:21:07 +0530
+./bin/htmldiff	Fri, 04 Dec 2015 17:21:07 +0530
+./bin/ldiff	Fri, 04 Dec 2015 17:21:07 +0530
+./bin/pry	Fri, 04 Dec 2015 17:21:07 +0530
+./bin/rspec	Fri, 04 Dec 2015 17:21:07 +0530
+./Gemfile	Fri, 04 Dec 2015 17:21:06 +0530
+./Gemfile.lock	Fri, 04 Dec 2015 17:21:06 +0530
+./lib/tautology_verifier/assumer.rb	Sun, 06 Dec 2015 00:06:15 +0530
+./lib/tautology_verifier/decider.rb	Sun, 06 Dec 2015 00:23:37 +0530
+./lib/tautology_verifier/extractor.rb	Sun, 06 Dec 2015 00:05:26 +0530
+./lib/tautology_verifier/parser.rb	Sun, 06 Dec 2015 00:05:48 +0530
+./lib/tautology_verifier/simulator.rb	Sun, 06 Dec 2015 00:16:31 +0530
+./lib/tautology_verifier.rb	Sun, 06 Dec 2015 00:04:19 +0530
+./spec/spec_helper.rb	Fri, 04 Dec 2015 17:21:07 +0530
+./spec/tautology_verifier/assumer_spec.rb	Fri, 04 Dec 2015 17:21:07 +0530
+./spec/tautology_verifier/decider_spec.rb	Fri, 04 Dec 2015 17:21:07 +0530
+./spec/tautology_verifier/extractor_spec.rb	Fri, 04 Dec 2015 17:21:07 +0530
+./spec/tautology_verifier/parser_spec.rb	Fri, 04 Dec 2015 17:21:07 +0530
+./spec/tautology_verifier/simulator_spec.rb	Fri, 04 Dec 2015 17:21:07 +0530
