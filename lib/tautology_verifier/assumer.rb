@@ -1,5 +1,3 @@
-require 'pry'
-
 class Assumer
 
   def self.assign_random_truth_table(predicate_array)
@@ -23,12 +21,7 @@ class Assumer
       end
       possible_truth_tables_array << temp
     end
-    binding.pry
     possible_truth_tables_array
   end
 
 end
-
-# Assumer.generate_possible_truth_tables(['a', 'b'])
-predicate_array = ["a", "b", "c", "d"]
-Assumer.generate_possible_truth_tables(predicate_array)
