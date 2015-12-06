@@ -4,9 +4,16 @@
 
     $ git clone https://github.com/sriharshakappala/tautology_verifier.git
 
-    $ cd tautology_verifier/lib
+    $ cd tautology_verifier
 
-    $ ruby tautology_verifier.rb
+    $ bundle
+
+    $ ruby lib/tautology_verifier.rb
+
+## How to test?
+
+    $ cd tautology_verifier
+    $ rspec
 
 ## Sample Interaction
 
