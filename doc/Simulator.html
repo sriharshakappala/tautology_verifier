@@ -113,13 +113,7 @@ decision as `False`</p>
 table values it returns `True`</p>
 </li></ol>
 
-<p>telling the statement as a tautology. <em>__</em> Time Complexity</p>
-<hr>
-
-<p>Best Case Scenario - O(1) Worst Case Scenario - O(n), where n is the total
-number of possible truth tables for the statement Average Case Scenario -
-O(n log(n)), where n is the total number of possible truth tables for the
-statement</p>
+<p>telling the statement as a tautology.</p>
 
   </section>
 
@@ -161,7 +155,7 @@ statement</p>
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/tautology_verifier/simulator.rb, line 23</span>
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/simulator.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">propositional_statement</span>, <span class="ruby-identifier">predicate_array</span>, <span class="ruby-identifier">random_truth_values</span>, <span class="ruby-identifier">possible_truth_tables</span>)
   <span class="ruby-ivar">@propositional_statement</span> = <span class="ruby-identifier">propositional_statement</span>
   <span class="ruby-ivar">@predicate_array</span> = <span class="ruby-identifier">predicate_array</span>
@@ -198,7 +192,7 @@ statement</p>
 
           
           <div class="method-source-code" id="substitute_truth_values_into_statement-source">
-            <pre><span class="ruby-comment"># File lib/tautology_verifier/simulator.rb, line 54</span>
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/simulator.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">substitute_truth_values_into_statement</span>(<span class="ruby-identifier">propositional_statement</span>, <span class="ruby-identifier">random_truth_values</span>)
   <span class="ruby-identifier">simulated_statement</span> = <span class="ruby-string">&quot;&quot;</span>
   <span class="ruby-identifier">random_truth_values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">truth_value</span><span class="ruby-operator">|</span>
@@ -244,7 +238,7 @@ strategy.</p>
 
           
           <div class="method-source-code" id="check_for_tautology-source">
-            <pre><span class="ruby-comment"># File lib/tautology_verifier/simulator.rb, line 32</span>
+            <pre><span class="ruby-comment"># File lib/tautology_verifier/simulator.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">check_for_tautology</span>
   <span class="ruby-identifier">counter</span> = <span class="ruby-value">0</span>
   <span class="ruby-identifier">random_decision</span> = <span class="ruby-constant">Decider</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@propositional_statement</span>, <span class="ruby-ivar">@random_truth_values</span>).<span class="ruby-identifier">evaluate_expression</span>

@@ -11,12 +11,6 @@ require_relative 'decider'
 # table values, if it finds a `false` in between the loop it returns the decision as `False`
 # 3. Else if it doesn't encounter any `false` till end of all the truth table values it returns `True`
 # telling the statement as a tautology.
-# ____________________________________________________________________________________________________
-# Time Complexity
-# --------------
-# Best Case Scenario - O(1)
-# Worst Case Scenario - O(n), where n is the total number of possible truth tables for the statement
-# Average Case Scenario - O(n log(n)), where n is the total number of possible truth tables for the statement
 
 class Simulator
 

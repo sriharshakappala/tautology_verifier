@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Gemfile - RDoc Documentation</title>
+<title>README - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -51,6 +51,17 @@
   </div>
 
   
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Tautology+Verifier">Tautology Verifier</a>
+    <li><a href="#label-How+to+run-3F">How to run?</a>
+    <li><a href="#label-How+to+test-3F">How to test?</a>
+    <li><a href="#label-Sample+Interaction">Sample Interaction</a>
+  </ul>
+</div>
+
 
   <div id="project-metadata">
     <div id="fileindex-section" class="nav-section">
@@ -70,23 +81,36 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page Gemfile">
+<main role="main" aria-label="Page README.md">
 
-<p>source &#39;<a href="https://rubygems.org">rubygems.org</a>&#39;</p>
+<h1 id="label-Tautology+Verifier">Tautology Verifier<span><a href="#label-Tautology+Verifier">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<p>group :development do</p>
+<h2 id="label-How+to+run-3F">How to run?<span><a href="#label-How+to+run-3F">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;pry&#39;</span>
-</pre>
+<pre>$ git clone https://github.com/sriharshakappala/tautology_verifier.git
 
-<p>end</p>
+$ cd tautology_verifier
 
-<p>group :test do</p>
+$ bundle
 
-<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;rspec&#39;</span>
-</pre>
+$ ruby lib/tautology_verifier.rb</pre>
 
-<p>end</p>
+<h2 id="label-How+to+test-3F">How to test?<span><a href="#label-How+to+test-3F">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>$ cd tautology_verifier
+$ rspec</pre>
+
+<h2 id="label-Sample+Interaction">Sample Interaction<span><a href="#label-Sample+Interaction">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>How many propositional statements do you want to check?
+3
+Type the propositional statement. Once you type a statement press `Enter`
+a|b
+a&amp;b
+a|!a
+False
+False
+True</pre>
 </main>
 
 
